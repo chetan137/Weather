@@ -1,0 +1,253 @@
+.SearchBox{
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 1.5%;
+
+
+}
+/* From Uiverse.io by estefaniarizzo */
+.custom-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #4caf50, #ffc107, #2196f3);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 0 4px rgba(0, 0, 0, 0.1) inset;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+    width: 200px;
+    height: 40px;
+}
+
+.custom-button:hover {
+    transform: translateY(-2px) rotateX(20deg) rotateY(10deg);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 0 0 4px rgba(0, 0, 0, 0.2) inset;
+    background: linear-gradient(45deg, #02ff0e, #fc0000, #ae00ff);
+}
+
+.custom-button:focus {
+    outline: none;
+}
+
+.custom-button:active {
+    transform: translateY(0) scale(1.1) rotate(45deg);
+    box-shadow: none;
+    animation: pulse 0.5s ease;
+}
+
+.custom-button::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    z-index: -1;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1) rotate(120deg);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.custom-button span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    /* El texto principal estará visible por defecto */
+}
+/* From Uiverse.io by Rodrypaladin */
+.box-input {
+  position: relative;
+}
+
+.border {
+  background-image: linear-gradient(to right bottom, #e300ff, #ff00aa, #ff5956, #ffb900, #fffe00);
+  box-shadow: -25px -10px 30px -5px rgba(225, 0, 255, 0.5),
+    25px -10px 30px -5px rgba(255, 0, 212, 0.5),
+    25px 10px 30px -5px rgba(255, 174, 0, 0.5),
+    -25px 10px 30px -5px rgba(255, 230, 0, 0.5);
+  padding: 4px;
+}
+
+.input {
+  background-color: #212121;
+  max-width: 250px;
+  height: 40px;
+  padding: 0 19px 0 10px;
+  font-size: 1.1em;
+  position: relative;
+  border: none;
+  color: white;
+  outline: 0;
+  overflow: hidden;
+}
+
+.box-input::after,
+.box-input::before {
+  content: "";
+  width: 130px;
+  height: 30px;
+  position: absolute;
+  z-index: -1;
+}
+
+.box-input::after {
+  bottom: 0;
+  right: 0;
+}
+
+.box-input::before {
+  top: 0;
+  left: 0;
+}
+
+.input::placeholder {
+  transition: all 0.5s ease-in, transform 0.2s ease-in 0.6s;
+}
+
+.input:focus::placeholder {
+  padding-left: 165px;
+  transform: translateY(-50px);
+}
+/* From Uiverse.io by Yaya12085 */
+
+/* From Uiverse.io by Subaashbala */
+/* Prior to using this loader, please ensure that you have set a background image or background color, as the text is transparent and not designed with a solid color. */
+.loader {
+  --ANIMATION-DELAY-MULTIPLIER: 70ms;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.loader span {
+  padding: 0;
+  margin: 0;
+  letter-spacing: -5rem;
+  animation-delay: 0s;
+  transform: translateY(4rem);
+  animation: hideAndSeek 1s alternate infinite cubic-bezier(0.86, 0, 0.07, 1);
+}
+.loader .l {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 0);
+}
+.loader .o {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 1);
+}
+.loader .a {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 2);
+}
+.loader .d {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 3);
+}
+.loader .ispan {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 4);
+}
+.loader .n {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 5);
+}
+.loader .g {
+  animation-delay: calc(var(--ANIMATION-DELAY-MULTIPLIER) * 6);
+}
+.letter {
+  width: fit-content;
+  height: 3rem;
+}
+.i {
+  margin-inline: 5px;
+}
+@keyframes hideAndSeek {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+/* From Uiverse.io by Saad3092003 */
+.obj {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  /* background-color: rgb(96, 96, 232); */
+  transform-style: preserve-3d;
+  transition: 0.5s all;
+  transform: rotateX(-25deg) rotateY(20deg);
+}
+
+.objchild {
+  animation: rotate 4s infinite linear;
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background:linear-gradient( to top,rgb(11, 11, 102),rgb(96, 96, 232) ) ; */
+}
+
+.objchild::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: rgb(37, 101, 230); */
+  /* background: radial-gradient(center center, farthest-side , #9993, transparent); */
+  filter: blur(20px);
+  box-shadow: 0 0 200px 15px white;
+  transform: rotateX(90deg) scale(1.1) translateZ(-120px);
+}
+
+.inn6 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgb(21, 21, 21);
+  transform: rotateX(90deg) translateZ(100px);
+  animation: updown 4s infinite ease-in-out;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(100px) rotateX(90deg) translateZ(100px);
+  }
+
+  50% {
+    transform: translateY(200px);
+  }
+
+  100% {
+    transform: translateY(100px) rotateX(450deg) translateZ(100px);
+  }
+}
